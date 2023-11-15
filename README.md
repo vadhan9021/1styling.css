@@ -1,8 +1,7 @@
-# 1styling.css .status {
+ .status {
             font-size: 18px;
             color: #6cb26e;
         }
-
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -10,30 +9,31 @@
             background-color: #f1f1f1;
             transition: background-color 0.3s;
         }
-
         .info-table {
-            margin: 20px auto;
+            
             border-collapse: collapse;
             width: 100%;
+        
         }
-
         .info-table th {
             font-weight: bold;
         }
 
         .info-table th, .info-table td {
             border: 1px solid #ccc;
-            padding: 8px;
+            padding:8px;
             font-family: Arial, sans-serif;
         }
 
         .info-table tr.table-header {
             background-color: #ccc;
+            border-collapse: collapse;
             font-weight: bold;
         }
 
         .info-table tr:nth-child(odd) {
             background-color: #f2f2f2;
+            border-collapse: collapse;
         }
 
         .page-content {
@@ -77,7 +77,6 @@
             transition: 0.4s;
             border-radius: 34px;
         }
-
         .slider:before {
             position: absolute;
             content: "";
@@ -89,15 +88,12 @@
             transition: 0.4s;
             border-radius: 50%;
         }
-
         .slider.round {
             border-radius: 40px;
         }
-
         .slider.round:before {
             border-radius: 50%;
         }
-
         input:checked + .slider {
             background-color: #2196F3;
         }
@@ -105,7 +101,6 @@
         input:checked + .slider:before {
             transform: translateX(26px);
         }
-
         .label-text {
             position: absolute;
             top: 50%;
@@ -114,14 +109,21 @@
             font-size: 14px;
             color: #333;
         }
-
+        .label-textp {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-left: 65px;
+            font-size: 14px;
+            color: #333;
+        }
         .round-button {
-            box-sizing: border-box;
+           
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             line-height: 20px;
             border: 4px solid #bdadad;
             border-radius: 50%;
@@ -141,16 +143,30 @@
 
         .round-button.disabled {
             background-color: #fc0000;
-            pointer-events: none; /* Disable button click */
+            pointer-events: none; 
+        }
+        .round-button.disabled1 {
+            background-color: #fc0000;
+            pointer-events: none; 
         }
 
         .play-icon {
             font-size: 1.5em;
         }
-
-        /* Center the Run button */
-        .run-button-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        @media screen and (max-width: 768px) {
+        .info-table th, .info-table td {
+            font-size: 12px;
+            padding: 6px;
         }
+
+        .label-text, .label-textp {
+            margin-left: 30px;
+            font-size: 12px;
+        }
+
+        .round-button {
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+        }
+    }
